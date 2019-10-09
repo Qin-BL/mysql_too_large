@@ -44,5 +44,5 @@ set global expire_logs_days = 10;v设置完后，可以通过 show variables lik
 下次重启mysql的时候，expire_logs_days也一样是10；
 
 ###2.index和data文件过大
-optimize table tablename,释放已经删除数据空间，参考https://blog.51cto.com/dadaman/1957229
+使用pt-online-schema-change，代替optimize table，不会锁表，安装参考https://blog.csdn.net/song634/article/details/80411064
 重启mysql，回收index
