@@ -45,4 +45,5 @@ set global expire_logs_days = 10;v设置完后，可以通过 show variables lik
 
 ###2.index和data文件过大
 使用pt-online-schema-change，代替optimize table，不会锁表，安装参考https://blog.csdn.net/song634/article/details/80411064
+pt-online-schema-change --user=mombaby --password=098f6bcd4621d373cade4e832627b4f6 --host=10.10.75.209 P=3308,D=gzh,t=wx_user --charset=utf8 --alter="ENGINE=InnoDB" --nocheck-replication-filters --alter-foreign-keys-method=auto --execute
 重启mysql，回收index
